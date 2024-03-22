@@ -1,0 +1,68 @@
+<%-include('partials/header')-%>
+<body>
+    <header class='header-bg'>
+        <div class="container header-title-div">
+           <h2> URLManager </h2>
+           <button class="btn btn-sm" id="logout"><i class="fas fa-user"></i></button>
+        </div>
+    </header>
+    <main>
+        <section class="hero section">
+            <div class="container hero-div">
+                <h1 class="hero-desc">Manage your favourite URLs all in one place!</h1>
+                <span class="mt-4" id="quote"></span>
+            </div>
+        </section>
+        <section class="container mt-2 manager-div">
+            <button class="btn btn-lg" id="folder-add-btn">Add Folder</button>
+            <div class="manager-url-display mt-5 border rounded shadow-sm" id="manager-display"></div>
+        </section>
+    </main>   
+    <footer class="mt-5">
+      <div class="container feedback">
+        <h2 class="feedback-desc">Submit your feedback</h2>
+        <h3 class="feedback-text" id="feedback-question">How was our service?</h3>
+        <div class="feedback-rating-group" id="feedback-btn-group-div">
+          <button class="feedbackbtn-group" onclick="rating(event, 1)"><i class="fas fa-star"></i></button>
+          <button class="feedbackbtn-group" onclick="rating(event, 2)"><i class="fas fa-star"></i></button>
+          <button class="feedbackbtn-group" onclick="rating(event, 3)"><i class="fas fa-star"></i></button>
+          <button class="feedbackbtn-group" onclick="rating(event, 4)"><i class="fas fa-star"></i></button>
+          <button class="feedbackbtn-group" onclick="rating(event, 5)"><i class="fas fa-star"></i></button>
+        </div>
+        <textarea id="feedback-comment" placeholder="Enter a comment: (optional)"></textarea>
+        <button class="tablinks" onclick="feedbacksubmit()">Submit</button>
+        <span id="ratingrequesttext" hidden>Please Select a rating!</span>
+      </div>
+   </footer>
+  </body>
+    <!-- The Modal -->
+<div class="modal " id="linkfolder">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+           <div class="col-8 p-2 linksubmitter">              
+                <input type="text" class="form-control" placeholder="Enter the URL" id="UrlSource">
+                <button class="btn btn-lg" id="previewbtn" onclick="addurl()">Add</button>             
+            </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body" id="linkfolder-body">
+          Modal body..
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  let user = '<%= username %>';
+  // Serialize and escape userdata to JSON string
+  let userDataString = '<%- JSON.stringify(userdata).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;') %>';
+  let userdata = JSON.parse(userDataString.replace(/&quot;/g, '"'));
+</script>
+<script src="/javascripts/mainapp.js"></script>
+<%-include('partials/footer')-%>

@@ -1,0 +1,488 @@
+:root {
+  --light-background: #fafafa;
+  --Off-White: #eeeff1;
+
+  --Black: #000000;
+  --Light-black: #38363b;
+  --Grey-font: #707594;
+
+  --white-important: #edf2f4;
+
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+/* Login Page */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--Off-White);
+  height: 100%;
+}
+
+.login-container {
+  margin: 15px auto;
+}
+
+.body {
+  position: relative;
+  width: 720px;
+  height: 90vh;
+  margin: auto;
+  border: 1px solid #dddd;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #a9bfcd4f;
+}
+
+.box-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-2 {
+  padding: 10px;
+}
+
+.box-1,
+.box-2 {
+  width: 50%;
+}
+
+.h-1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text-muted {
+  font-size: 14px;
+  color: var(--Grey-font);
+}
+
+.container .box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: #615f5fdd;
+}
+
+.box:active,
+.box:visited {
+  border: 2px solid #ee82ee;
+}
+
+.box:hover {
+  border: 2px solid #ee82ee;
+}
+
+.btn.btn-primary {
+  background-color: transparent;
+  color: #ee82ee;
+  border: 0px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.btn.btn-primary .fas.fa-chevron-right {
+  font-size: 12px;
+}
+
+.footer .p-color {
+  color: #ee82ee;
+}
+
+.footer.text-muted {
+  font-size: 10px;
+}
+
+.fas.fa-times {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  background-color: #f3cff379;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fas.fa-times:hover {
+  color: #ff0000;
+}
+#newaccountcreationDiv {
+  display: none;
+  flex-direction: column;
+}
+#oldaccountloginDiv {
+  display: flex;
+  flex-direction: column;
+}
+/* MAIN APP CSS */
+
+.container {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  margin-top: 5rem;
+}
+
+.header-bg {
+  background: rgb(70, 61, 235);
+  background: linear-gradient(
+    90deg,
+    rgba(70, 61, 235, 1) 7%,
+    rgba(174, 56, 195, 1) 77%,
+    rgba(182, 127, 229, 1) 100%,
+    rgba(104, 196, 214, 1) 100%
+  );
+  color: var(--light-background);
+  font-size: var(--size-6xl);
+  padding: 0.3rem;
+  position: sticky;
+  top:0;
+}
+
+.header-title-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.hero-div{
+    text-align: center;
+}
+.linksubmitter{
+    display: flex;
+    gap: 1em;
+    border-radius: 3px;
+}
+.hero-desc{
+    font-family: Montserrat-bold, sans-serif;
+    font-weight: bold;
+    font-size: var(--size-7xl);
+    color: var(--Light-black);
+}
+
+#linkpreviewsource{
+  padding: 0.5rem;
+  border: double 3px transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, rgb(118, 30, 182), rgb(194, 146, 208));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+#folder-add-btn, #previewbtn{
+    background: linear-gradient(
+    90deg,
+    rgba(70, 61, 235, 1) 7%,
+    rgba(174, 56, 195, 1) 77%,
+    rgba(182, 127, 229, 1) 100%,
+    rgba(104, 196, 214, 1) 100%
+  );
+  color: var(--light-background);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+#manager-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.1em;
+}
+
+.manager-folder{
+  width: 7rem;
+  height:5rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.manager-folder-thumbnail{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.manager-folder-title{
+  position: absolute;
+  color: var(--Black);
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: LTSaeada-medium;
+  word-wrap: break-word;
+}
+
+/* folder css */
+#linkfolder .modal-content{
+  background-color: #F0C55D;
+}
+#linkfolder .mode-body{
+height: 20rem !important;
+overflow-y: scroll !important;
+overflow-x: auto !important;
+}
+
+.folder-child-div{
+  padding: 1.5em;
+  height: 7rem;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  overflow: hidden;
+}
+
+.previewimage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.url-right-div{
+  display: flex;
+    gap: 0.1em;
+    flex-direction: column;
+}
+
+.previewtitle{
+  font-size: 0.7rem;
+}
+
+.previewdesc{
+  font-size: 0.5rem;
+}
+
+.url-right-div a{
+  font-size: 0.8em;
+}
+
+/* feedback */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+ 
+  background: linear-gradient(
+    90deg,
+    rgba(70, 61, 235, 1) 7%,
+    rgba(174, 56, 195, 1) 77%,
+    rgba(182, 127, 229, 1) 100%,
+    rgba(104, 196, 214, 1) 100%
+  );
+}
+
+#footer-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.feedback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.feedback-desc{
+  font-size: var(--size-3xl);
+  color: var(--light-background);
+}
+
+.feedback-text{
+  font-size: var(--size-lg);
+  color: var(--light-background);
+
+}
+.feedbackbtn-group{
+  display: inline;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 3px;
+}
+
+#feedback-comment{
+  border-radius: 3px;
+  width: 26rem;
+  height: 7rem;
+  resize: none;
+  padding: 0.5em;
+}
+
+.tablinks{
+  width: 5rem;
+  height: 2rem;
+  border-radius: 3px;
+}
+
+#ratingrequesttext{
+  color: white;
+}
+
+/* Quote */
+#quote{
+  font-style: italic;
+  font-weight: 700;
+  color: rgba(174, 56, 195, 1) ;
+}
+
+#quote::before{
+  content:"-- "
+}
+/* media queries */
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* Adding font */
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/MontserratAlternates-Bold.otf");
+}
+
+@font-face {
+    font-family: Montserrat-bold;
+    src: url("../fonts/MontserratAlternates-ExtraBold.otf");
+  }
+  
+ /* @font-face {
+    font-family: Cocogoose-regular;
+    src: url("../fonts/Cocogoose-Pro-Regular-trial.ttf");
+  }
+  
+  @font-face {
+    font-family: Lemonmilk-bold;
+    src: url("../fonts/LEMONMILK-Bold.otf");
+  }
+  
+  @font-face {
+    font-family: Lemonmilk-medium;
+    src: url("../fonts/LEMONMILK-Medium.otf");
+  }
+  
+  @font-face {
+    font-family: LTSaeada-bold;
+    src: url("../fonts/LTSaeada-Bold.otf");
+  }
+     
+  
+  @font-face {
+    font-family: Mont-heavy;
+    src: url("../fonts/Mont-HeavyDEMO.otf");
+  }
+  
+  @font-face {
+    font-family: Roboto-bold;
+    src: url("../fonts/Roboto-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: Roboto-italic;
+    src: url("../fonts/Roboto-Italic.ttf");
+  }
+  
+  @font-face {
+    font-family: Roboto-light;
+    src: url("../fonts/Roboto-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: Roboto-medium;
+    src: url("../fonts/Roboto-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: The-Bold-Font;
+    src: url("../fonts/THE\ BOLD\ FONT\ -\ FREE\ VERSION\ -\ 2023.otf");
+  }
+   */
